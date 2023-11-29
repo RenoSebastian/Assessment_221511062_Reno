@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\KasirController;
-
+use App\Http\Controllers\TenanController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,3 +46,6 @@ Route::delete('/barang/{id}', [BarangController::class, 'destroy'])->name('baran
 
 //menampilkan kasir 
 Route::get('/kasir', [KasirController::class, 'index'])->name('kasir.index');
+
+//menampilkan data tenan
+Route::get('/tenan', [TenanController::class, 'index'])->name('tenan.index');
