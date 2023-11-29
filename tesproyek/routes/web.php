@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\KasirController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,3 +42,7 @@ Route::put('/barang/{id}', [BarangController::class, 'update'])->name('barang.up
 
 // Menghapus barang
 Route::delete('/barang/{id}', [BarangController::class, 'destroy'])->name('barang.destroy');
+
+
+//menampilkan kasir 
+Route::get('/kasir', [KasirController::class, 'index'])->name('kasir.index');
