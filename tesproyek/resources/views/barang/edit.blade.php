@@ -1,5 +1,3 @@
-<!-- File: resources/views/barang/edit.blade.php -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,15 +17,17 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             max-width: 400px;
             margin: 0 auto;
+            text-align: center;
         }
 
         h1 {
-            text-align: center;
+            color: #3498db;
         }
 
         label {
             display: block;
-            margin-bottom: 8px;
+            margin: 15px 0 8px;
+            text-align: left;
         }
 
         input {
@@ -37,14 +37,19 @@
             box-sizing: border-box;
         }
 
+        button, .back-button {
+            display: inline-block;
+            width: 48%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
         button {
             background-color: #3498db;
             color: #fff;
             border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
         }
 
         button:hover {
@@ -55,14 +60,7 @@
             background-color: #2ecc71;
             color: #fff;
             border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            display: inline-block;
-            text-decoration: none;
-            text-align: center;
-            margin-top: 10px;
+            margin-left: 4%;
         }
 
         .back-button:hover {
@@ -96,9 +94,8 @@
             <input type="text" name="Stok" value="{{ $barang->Stok }}" required>
 
             <button type="submit">Simpan Perubahan</button>
+            <a href="{{ route('barang.index') }}" class="back-button">Kembali ke Daftar Barang</a>
         </form>
-
-        <a href="{{ route('barang.index') }}" class="back-button">Kembali ke Daftar Barang</a>
     </div>
 
 </body>

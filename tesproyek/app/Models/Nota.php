@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Nota extends Model
 {
+    use HasFactory;
+
     protected $table = 'nota';
 
     protected $fillable = [
@@ -22,11 +24,11 @@ class Nota extends Model
 
     public function tenan()
     {
-        return $this->belongsTo(Tenan::class, 'KodeTenan', 'id');
+        return $this->belongsTo(Tenan::class, 'KodeTenan', 'KodeTenan');
     }
 
     public function kasir()
     {
-        return $this->belongsTo(Kasir::class, 'KodeKasir', 'id');
+        return $this->belongsTo(Kasir::class, 'KodeKasir', 'KodeKasir');
     }
 }

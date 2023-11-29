@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\KasirController;
 use App\Http\Controllers\TenanController;
+use App\Http\Controllers\NotaController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -49,3 +51,12 @@ Route::get('/kasir', [KasirController::class, 'index'])->name('kasir.index');
 
 //menampilkan data tenan
 Route::get('/tenan', [TenanController::class, 'index'])->name('tenan.index');
+
+//untuk nota
+Route::get('/nota', [NotaController::class, 'index'])->name('nota.index');
+Route::get('/nota/create', [NotaController::class, 'create'])->name('nota.create');
+Route::post('/nota', [NotaController::class, 'store'])->name('nota.store');
+Route::get('/nota/{id}', [NotaController::class, 'show'])->name('nota.show');
+Route::get('/nota/{id}/edit', [NotaController::class, 'edit'])->name('nota.edit');
+Route::put('/nota/{id}', [NotaController::class, 'update'])->name('nota.update');
+Route::delete('/nota/{id}', [NotaController::class, 'destroy'])->name('nota.destroy');
